@@ -1,0 +1,119 @@
+
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --card-background-color: #f8f9fa;
+    --header-footer-background-color: #e9ecef;
+    --navbar-color: #007bff;
+    --navbar-text-color: #ffffff;
+    --muted-text-color: #6c757d;
+    --close-button-color: #333333;
+}
+
+body.dark-mode {
+    --background-color: #2b2b2b;
+    --text-color: #e0e0e0;
+    --card-background-color: #3a3a3a;
+    --header-footer-background-color: #1c1c1c;
+    --navbar-color: #343a40;
+    --navbar-text-color: #dcdcdc;
+    --muted-text-color: #b0b0b0;
+    --close-button-color: #e0e0e0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar, footer {
+    background-color: var(--navbar-color) !important;
+    color: var(--navbar-text-color) !important;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: var(--navbar-text-color) !important;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.text-muted, small {
+    color: var(--muted-text-color) !important;
+}
+
+#theme-toggle {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#sidebar .card {
+    max-height: 320px;
+    overflow: hidden;
+}
+
+#most-popular-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+#most-popular-article h5 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+#most-popular-article p {
+    line-height: 1.4;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    #news-feed {
+        order: 2;
+    }
+    #sidebar {
+        order: 1;
+        margin-bottom: 1rem;
+    }
+}
+
+.modal-content {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-header, .modal-footer {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+}
+
+.modal-body {
+    color: var(--text-color);
+}
+
+.modal-header .close {
+    color: var(--close-button-color);
+    transition: color 0.3s ease;
+}
